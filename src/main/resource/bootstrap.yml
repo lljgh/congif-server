@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master                                           #配置仓库的分支
+      server:
+        git:
+          uri: https://github.com/lljgh/Test-config-cloud  #配置git仓库地址
+          searchPaths:                                        #配置仓库路径
+          username: 1371408321@qq.com
+          password: yiwang1314@
+          skip-ssl-validation: true
+server:
+  port: 9004

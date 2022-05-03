@@ -13,3 +13,14 @@ spring:
           skip-ssl-validation: true
 server:
   port: 9004
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address:  true
+    instance-id:  1.200.91.110:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      dafaultZone: http://${eureka.instance.hostname}:8761/eureka/
